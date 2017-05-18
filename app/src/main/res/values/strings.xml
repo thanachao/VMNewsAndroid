@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">VMNews</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="youdonthaveinternet">You do not have internet connection</string>
+    <string name="alert">Alert</string>
+    <string name="OK">OK</string>
+    <string name="CANCEL">Cancel</string>
+    <string name="Back">Back</string>
+
+    <string name="category_business">business</string>
+    <string name="category_entertainment">entertainment</string>
+    <string name="category_gaming">gaming</string>
+    <string name="category_general">general</string>
+    <string name="category_music">music</string>
+    <string name="category_politics">politics</string>
+    <string name="category_science">science-and-nature</string>
+    <string name="category_sport">sport</string>
+    <string name="category_technology">technology</string>
+
+    <string name="category_business_topnews">Top News</string>
+    <string name="category_business_display">Business</string>
+    <string name="category_entertainment_display">Entertainment</string>
+    <string name="category_gaming_display">Gaming</string>
+    <string name="category_general_display">General</string>
+    <string name="category_music_display">Music</string>
+    <string name="category_politics_display">Politics</string>
+    <string name="category_science_display">Science</string>
+    <string name="category_sport_display">Sport</string>
+    <string name="category_technology_display">Technology</string>
+
+    <!-- Pull to Refresh -->
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_tap_label">Loading...</string>
+
+    <array name="array_categories">
+        <item>@string/category_business</item>
+        <item>@string/category_entertainment</item>
+        <item>@string/category_gaming</item>
+        <item>@string/category_general</item>
+        <item>@string/category_music</item>
+        <item>@string/category_politics</item>
+        <item>@string/category_science</item>
+        <item>@string/category_sport</item>
+        <item>@string/category_technology</item>
+    </array>
+
+    <array name="array_categories_display">
+        <item>@string/category_business_display</item>
+        <item>@string/category_entertainment_display</item>
+        <item>@string/category_gaming_display</item>
+        <item>@string/category_general_display</item>
+        <item>@string/category_music_display</item>
+        <item>@string/category_politics_display</item>
+        <item>@string/category_science_display</item>
+        <item>@string/category_sport_display</item>
+        <item>@string/category_technology_display</item>
+    </array>
+
+    <integer-array name="array_categories_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </integer-array>
+
+</resources>
