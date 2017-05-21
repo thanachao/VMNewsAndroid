@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupImageLoader() {
 
         options = new DisplayImageOptions.Builder()
-                .showImageOnLoading(R.drawable.ic_stub)
+                .showImageOnLoading(R.drawable.placeholder)
                 .showImageForEmptyUri(R.drawable.ic_empty)
                 .showImageOnFail(R.drawable.ic_error)
                 .delayBeforeLoading(1000)
@@ -184,13 +184,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         int size = listNewsCache.size();
-        int incremental = 0;
+        int incremental ;
 
         if (tempCurrentIndex + PAGE_LIMIT <= size) {
-            incremental = tempCurrentIndex + PAGE_LIMIT;
+            incremental = tempCurrentIndex + PAGE_LIMIT ;
 
         } else {
-            incremental = size - 1;
+            incremental = size;
 
         }
 
@@ -212,9 +212,9 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 listNews.addAll(listTemp);
 
-                if (listTemp.size() == PAGE_LIMIT && listTemp.size() < listNews.size()) {
+                if (listNews.size() < listNewsCache.size()) {
                     isEndOfRecord = false;
-                    currentIndex = currentIndex + PAGE_LIMIT;
+                    currentIndex = currentIndex + PAGE_LIMIT ;
 
                 } else {
                     isEndOfRecord = true;
@@ -222,6 +222,9 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 mPosition = linearLayoutManager.findLastVisibleItemPosition();
+                if (mPosition != 0)
+                    mPosition = mPosition - 1;
+
                 newsAdapter.setList(listNews);
                 linearLayoutManager.scrollToPosition(mPosition);
 
@@ -261,6 +264,9 @@ public class MainActivity extends AppCompatActivity {
         super.onConfigurationChanged(newConfig);
 
         mPosition = linearLayoutManager.findLastVisibleItemPosition();
+        if (mPosition != 0)
+            mPosition = mPosition - 1;
+
         newsAdapter = new NewsAdapterRecycle(MainActivity.this);
         lv_news.setAdapter(newsAdapter);
         newsAdapter.setList(listNews);
